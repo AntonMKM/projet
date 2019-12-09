@@ -1,0 +1,34 @@
+@font-face {
+	font-family: "LifeCraft_Font";
+	src: url('../fonts/LifeCraft_Font.ttf');
+}
+body {
+    font-family: "LifeCraft_Font";
+    font-size: larger;
+    color: burlywood;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-image: url(/public/img/fond.jpg);
+}
+#banner {
+    height: 250px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-image: url(/public/img/banner.png);
+}
+#menu {
+    margin-left: 41%;
+    margin-top: 200px;
+    position: absolute;
+    
+}
+.button {
+    text-decoration: none;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    
+}
