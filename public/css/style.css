@@ -3,7 +3,7 @@
 	src: url('../fonts/LifeCraft_Font.ttf');
 }
 body {
-    font-family: "LifeCraft_Font";
+    /* font-family: "LifeCraft_Font"; */
     font-size: larger;
     color: burlywood;
     margin-left: 20%;

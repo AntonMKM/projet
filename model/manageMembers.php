@@ -1,5 +1,5 @@
 <?php
-require 'dbConnect.php';
+
 class ManageMembers extends DbConnect {
 
     

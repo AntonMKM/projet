@@ -1,9 +1,8 @@
  <?php
  
-require "dbConnect.php";
-require "class/articlesClass.php";
 
-class manageArticles extends DbConnect{
+
+class ManageArticles extends DbConnect{
 public function getAllArticles(){
     $query = "SELECT * FROM articles";
     $result = $this->Connect()->prepare($query);
@@ -12,15 +11,18 @@ public function getAllArticles(){
     while($show = $result->fetch()){
         $article = new Article($show);
         $tab[] = $article;
+
     }
+    
     return $tab;
 }
 
 public function sendAllArticle($data){
     $article = new Article($data);
-    $query = "INSERT INTO articles(title, content) VALUES(:title, :content)";
+    $article -> setAutor($_SESSION['login']);
+    $query = "INSERT INTO articles(title, content, autor) VALUES(:title, :content, :autor)";
     $result = $this->Connect()->prepare($query);
-    $result->execute(array("title" => $article->getTitle(), "content" => $article->getContent()));
+    $result->execute(array("title" => $article->getTitle(), "content" => $article->getContent(), "autor" => $article->getAutor()));
 }
 
 }

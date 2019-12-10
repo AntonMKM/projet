@@ -1,9 +1,18 @@
 <?php
 session_start();
 
-require 'controller/membersController.php';
+spl_autoload_register(function ($class) {
+    $directories = ["class","model","controller"];
+    foreach ($directories as $dir) {
+        $file = $dir ."/" . $class . ".php";
+        if(file_exists($file)){
+            require_once $file;
+        }
+    }
+});
 
 $memberController = new MembersController();
+$articleController = new ArticleController();
 
 if(!empty($_GET)){
     extract($_GET);
@@ -11,25 +20,12 @@ if(!empty($_GET)){
     if(isset($action)){
         switch($action){
             case 'accueil':
-                require 'view/homeView.php';
-                
-// require "controller/articlesController.php";
-
-// extract($_GET);
-
-// if($action == "accueil"){
-//     require "view/homeView.php";
-//     if(isset($_POST['send'])){
-//         sendArticle($_POST);
-        
-//     }
-// }
-
-
-// require "view/templates.php";
-
- 
+                $articleController->getArticles();
                 break;
+                case 'sendArticle':
+                $articleController->sendArticle();
+                break;
+
             case 'connexion':
                 require 'view/connexion.php';
                 break;
@@ -48,7 +44,7 @@ if(!empty($_GET)){
             case 'update':
                 $memberController->update($id);
                 break;
-            case 'supprimer':
+            case 'delete':
                 $memberController->delete($id);
                 break;
             case 'connecter':
@@ -62,6 +58,6 @@ if(!empty($_GET)){
         require 'view/error.php';
     }
 }else{
-    require 'view/homeView.php';
+    $articleController->getArticles();
 }
 

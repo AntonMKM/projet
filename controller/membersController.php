@@ -1,6 +1,5 @@
 <?php
-require 'model/manageMembers.php';
-require 'class/membersClass.php';
+
 
 class MembersController {
 function inscription(){
@@ -42,6 +41,7 @@ function inscription(){
         if($member = $connect->fetch()){
            if(password_verify($_POST['pass'], $member['pass'])){
             $_SESSION['id']=$member['id'];
+            $_SESSION['login']=$member['login'];
            
            }else{
                $erreur = "Mot de passe erroné";
