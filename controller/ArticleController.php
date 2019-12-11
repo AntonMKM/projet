@@ -15,7 +15,23 @@ function getArticles(){
 
 function sendArticle(){
     $gestion = new ManageArticles();
-    $gestion->sendAllArticle($_POST);
+    $article = new Article($_POST);
+            if(isset($_FILES['img']) AND $_FILES['img']['error'] == 0){
+                if($_FILES['img']['size'] <= 10000000){
+                    $tabExt=pathinfo($_FILES['img']["name"]);
+                    $extension=$tabExt['extension'];
+                    $extensionGood=['jpg', 'png', 'jpeg'];
+                    
+                    if (in_array($extension, $extensionGood)){
+                        $nomImg = $article->getTitle(). basename($_FILES['img']['name']);
+                        move_uploaded_file($_FILES['img']['tmp_name'], 'public/img/'.$nomImg);
+                        $article->setImg($nomImg);
+                        $gestion->sendAllArticle($article);
+                    
+                    }
+                }
+            }
+        
     header("location: index.php?action=accueil");
 }
 }

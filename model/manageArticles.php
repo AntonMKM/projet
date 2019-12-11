@@ -1,30 +1,24 @@
  <?php
  
-
-
 class ManageArticles extends DbConnect{
-public function getAllArticles(){
-    $query = "SELECT * FROM articles";
-    $result = $this->Connect()->prepare($query);
-    $result->execute();
-    $tab = [];
-    while($show = $result->fetch()){
-        $article = new Article($show);
-        $tab[] = $article;
-
+    public function getAllArticles(){
+        $query = "SELECT * FROM articles";
+        $result = $this->Connect()->prepare($query);
+        $result->execute();
+        $tab = [];
+        while($show = $result->fetch()){
+            $article = new Article($show);
+            $tab[] = $article;
     }
-    
     return $tab;
 }
 
-public function sendAllArticle($data){
-    $article = new Article($data);
-    $article -> setAutor($_SESSION['login']);
-    $query = "INSERT INTO articles(title, content, author) VALUES(:title, :content, :author)";
+public function sendAllArticle(Article $article){
+    // $article = new Article($data);
+    $article -> setAuthor($_SESSION['login']);
+    $query = "INSERT INTO articles(title, content, author, img) VALUES(:title, :content, :author, :img)";
     $result = $this->Connect()->prepare($query);
-    $result->execute(array("title" => $article->getTitle(), "content" => $article->getContent(), "author" => $article->getAuthor()));
+    $result->execute(array("title" => htmlspecialchars($article->getTitle()), "content" => htmlspecialchars($article->getContent()), "author" => $article->getAuthor(), "img" => $article->getImg()));
+    }
 }
-
-}
-
 ?> 

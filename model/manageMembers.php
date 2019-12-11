@@ -7,9 +7,9 @@ function manageInscription(Member $data){
         $pdo = $this->Connect();
         $request = "INSERT INTO members (login, pass, email) VALUES ( :login, :pass, :email)";
         $insert = $pdo->prepare($request);
-        $insert->execute(['login'=>$data->getLogin(),
+        $insert->execute(['login'=>htmlspecialchars($data->getLogin()),
                           'pass'=>password_hash($data->getPass(), PASSWORD_DEFAULT),
-                          'email'=>$data->getEmail()]);
+                          'email'=>htmlspecialchars($data->getEmail())]);
     }
     function manageView(){
         $pdo = $this->Connect();

@@ -9,8 +9,9 @@
     <body>
         <!--barre de navigation-->
         <div id="banner">
+        <img src="public/img/banner.png" alt="banner">
             <nav>
-            <div id="menu">
+                
                 <a class="button" href="index.php">Accueil</a>
                 <a class="button" href="index.php?action=signin">S'inscrire</a>
                     <?php if(isset($_SESSION['status']) AND $_SESSION['status'] == 'admin'): ?>
@@ -23,7 +24,8 @@
                         <a class="button" href="index.php?action=connexion">Se connecter</a>
                     <?php endif; ?>
             </nav>
-                    </div>
+            
+                    
         </div>
 
         <?= $content ?>

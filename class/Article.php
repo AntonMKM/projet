@@ -8,8 +8,7 @@ private $title;
 private $content;
 private $date;
 private $author;
-
-
+private $img;
 
 public function __construct(array $data = null){
     if($data){
@@ -57,13 +56,23 @@ public function init(array $data){
     public function setDate($date){
         $this->date = ($date);
     }
+
     public function getAuthor() {
 		return $this->author;
 	}
 
 	public function setAuthor($author) {
 		$this->author = $author;
-	}
+    }
+    
+    public function getImg() {
+        return $this->img;
+    }
+    
+    public function setImg($img) {
+        $this->img = $img;
+    }
+    
 
 }
 

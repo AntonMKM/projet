@@ -1,34 +1,62 @@
 @font-face {
-	font-family: "LifeCraft_Font";
-	src: url('../fonts/LifeCraft_Font.ttf');
+  font-family: "LifeCraft_Font";
+  src: url("../fonts/LifeCraft_Font.ttf");
 }
 body {
-    /* font-family: "LifeCraft_Font"; */
-    font-size: larger;
-    color: burlywood;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-image: url(/public/img/fond.jpg);
+  /* font-family: "LifeCraft_Font"; */
+  font-size: larger;
+  color: burlywood;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-image: url(/public/img/fond.jpg);
+  background-attachment: fixed;
 }
 #banner {
-    height: 250px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-image: url(/public/img/banner.png);
+  /* background-size: contain;
+  background-repeat: no-repeat; */
+  margin-top: 2%;
+  margin-bottom: 2%;
+  /* background-image: url(/public/img/banner.png); */
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  position: relative;
 }
-#menu {
-    margin-left: 41%;
-    margin-top: 200px;
-    position: absolute;
-    
+#banner img {
+  width: 100%;
 }
+nav {
+  position: absolute;
+  bottom: 5px;
+}
+/* #menu {
+  margin-left: 41%;
+  margin-top: 200px;
+  position: absolute;
+} */
 .button {
-    text-decoration: none;
-    background-color: grey;
-    color: white;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-left: 5px;
-    padding: 5px;
-    
+  text-decoration: none;
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 5px;
+}
+.picture {
+  float: left;
+  height: 50%;
+}
+.heightArticle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 250px;
+}
+.blocNext {
+  display: flex;
+  justify-content: space-between;
+}
+.blocNext a,
+.blocNext span {
+  display: inline-block;
 }
