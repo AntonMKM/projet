@@ -1,11 +1,11 @@
 <?php
-$title= 'Inscription';
+$title = 'Inscription';
 ob_start();
 ?>
 
-    <div class="form">
+<div class="form">
     <form action="index.php?action=inscription" method="post" enctype="multipart/form-data">
-        
+
         <label for="pseudo">Pseudo</label>
         <input type="text" name="login" id="pseudo" class="form-control" placeholder="Entrez votre pseudo" required>
         <label for="email">Email</label>
@@ -15,11 +15,11 @@ ob_start();
         <span onclick="showPassword('pass')" id="visible">afficher le mot de passe</span>
         <br><br>
         <input type="submit" name="inscription" value="inscription" class="button">
-        
+
     </form>
 </div>
 
-<?php 
-$content= ob_get_clean(); 
+<?php
+$content = ob_get_clean();
 require 'template.php';
 ?>

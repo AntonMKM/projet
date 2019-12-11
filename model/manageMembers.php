@@ -1,17 +1,22 @@
 <?php
 
-class ManageMembers extends DbConnect {
+class ManageMembers extends DbConnect
+{
 
 
-function manageInscription(Member $data){
+    function manageInscription(Member $data)
+    {
         $pdo = $this->Connect();
         $request = "INSERT INTO members (login, pass, email) VALUES ( :login, :pass, :email)";
         $insert = $pdo->prepare($request);
-        $insert->execute(['login'=>htmlspecialchars($data->getLogin()),
-                          'pass'=>password_hash($data->getPass(), PASSWORD_DEFAULT),
-                          'email'=>htmlspecialchars($data->getEmail())]);
+        $insert->execute([
+            'login' => htmlspecialchars($data->getLogin()),
+            'pass' => password_hash($data->getPass(), PASSWORD_DEFAULT),
+            'email' => htmlspecialchars($data->getEmail())
+        ]);
     }
-    function manageView(){
+    function manageView()
+    {
         $pdo = $this->Connect();
         $request = "SELECT * FROM members";
         $view = $pdo->prepare($request);
@@ -19,29 +24,33 @@ function manageInscription(Member $data){
         return $view;
     }
 
-    function manageDelete($id){
+    function manageDelete($id)
+    {
         $pdo = $this->Connect();
         $request = "DELETE FROM members WHERE id=$id";
         $delete = $pdo->prepare($request);
         $delete->execute();
     }
 
-    function manageUpdate(Member $member){
+    function manageUpdate(Member $member)
+    {
         $pdo = $this->Connect();
         $id = $member->getId();
         $request = "UPDATE members SET login = :login, email = :email, pass= :pass WHERE id=$id";
         $update = $pdo->prepare($request);
-        $update->execute(['login'=>$member->getLogin(),
-                          'pass'=>password_hash($member->getPass(), PASSWORD_DEFAULT),
-                          'email'=>$member->getEmail()]);
+        $update->execute([
+            'login' => $member->getLogin(),
+            'pass' => password_hash($member->getPass(), PASSWORD_DEFAULT),
+            'email' => $member->getEmail()
+        ]);
     }
 
-        function manageConnect(array $data){
+    function manageConnect(array $data)
+    {
         $pdo = $this->Connect();
         $request = "SELECT * FROM members WHERE login = :login";
         $connect = $pdo->prepare($request);
-        $connect->execute(['login'=>$data['login']]);
+        $connect->execute(['login' => $data['login']]);
         return $connect;
     }
-
 }

@@ -75,5 +75,3 @@ public function init(array $data){
     
 
 }
-
-?>

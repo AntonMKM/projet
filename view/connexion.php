@@ -1,10 +1,10 @@
-<?php 
-if(isset($_SESSION['id'])){
+<?php
+if (isset($_SESSION['id'])) {
 	header('location:index.php');
 }
-$title='Connexion';
+$title = 'Connexion';
 
-ob_start();?>
+ob_start(); ?>
 
 
 <div class="container">
@@ -18,9 +18,9 @@ ob_start();?>
 		<input type="submit" value="Se connecter" class="button">
 	</form>
 </div>
-<?php if(isset($erreur)){
-		echo $erreur;
-	} 
+<?php if (isset($erreur)) {
+	echo $erreur;
+}
 ?>
 
 <?php

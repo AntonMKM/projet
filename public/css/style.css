@@ -43,6 +43,10 @@ nav {
   margin-left: 5px;
   padding: 5px;
 }
+
+textarea {
+  width: 100%;
+}
 .picture {
   float: left;
   height: 50%;

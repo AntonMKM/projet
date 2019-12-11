@@ -2,10 +2,10 @@
 session_start();
 
 spl_autoload_register(function ($class) {
-    $directories = ["class","model","controller"];
+    $directories = ["class", "model", "controller"];
     foreach ($directories as $dir) {
-        $file = $dir ."/" . $class . ".php";
-        if(file_exists($file)){
+        $file = $dir . "/" . $class . ".php";
+        if (file_exists($file)) {
             require_once $file;
         }
     }
@@ -14,14 +14,14 @@ spl_autoload_register(function ($class) {
 $memberController = new MembersController();
 $articleController = new ArticleController();
 
-if(!empty($_GET)){
+if (!empty($_GET)) {
     extract($_GET);
-        if(isset($action)){
-            switch($action){
+    if (isset($action)) {
+        switch ($action) {
             case 'accueil':
                 $articleController->getArticles();
                 break;
-                case 'sendArticle':
+            case 'sendArticle':
                 $articleController->sendArticle();
                 break;
             case 'connexion':
@@ -52,10 +52,9 @@ if(!empty($_GET)){
                 require 'view/error.php';
                 break;
         }
-    }else{
+    } else {
         require 'view/error.php';
     }
-}else{
+} else {
     $articleController->getArticles();
 }
-
