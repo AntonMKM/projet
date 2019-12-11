@@ -2,7 +2,6 @@
 
 class ManageMembers extends DbConnect {
 
-    
 
 function manageInscription(Member $data){
         $pdo = $this->Connect();

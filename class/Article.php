@@ -7,7 +7,7 @@ private $id;
 private $title;
 private $content;
 private $date;
-private $autor;
+private $author;
 
 
 
@@ -57,12 +57,12 @@ public function init(array $data){
     public function setDate($date){
         $this->date = ($date);
     }
-    public function getAutor() {
-		return $this->autor;
+    public function getAuthor() {
+		return $this->author;
 	}
 
-	public function setAutor($autor) {
-		$this->autor = $autor;
+	public function setAuthor($author) {
+		$this->author = $author;
 	}
 
 }

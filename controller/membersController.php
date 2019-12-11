@@ -42,6 +42,7 @@ function inscription(){
            if(password_verify($_POST['pass'], $member['pass'])){
             $_SESSION['id']=$member['id'];
             $_SESSION['login']=$member['login'];
+            $_SESSION['status']=$member['status'];
            
            }else{
                $erreur = "Mot de passe erroné";

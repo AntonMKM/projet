@@ -13,7 +13,9 @@
             <div id="menu">
                 <a class="button" href="index.php">Accueil</a>
                 <a class="button" href="index.php?action=signin">S'inscrire</a>
-                <a class="button" href="index.php?action=manage">Gestion</a>
+                    <?php if(isset($_SESSION['status']) AND $_SESSION['status'] == 'admin'): ?>
+                        <a class="button" href="index.php?action=manage">Gestion</a>
+                        <?php endif; ?>
                     <?php if(isset($_SESSION['id'])): ?>
                         <a class="button" href="index.php?action=deconnexion">Se déconnecter</a>
                     <?php endif; ?>

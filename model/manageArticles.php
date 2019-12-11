@@ -20,9 +20,9 @@ public function getAllArticles(){
 public function sendAllArticle($data){
     $article = new Article($data);
     $article -> setAutor($_SESSION['login']);
-    $query = "INSERT INTO articles(title, content, autor) VALUES(:title, :content, :autor)";
+    $query = "INSERT INTO articles(title, content, author) VALUES(:title, :content, :author)";
     $result = $this->Connect()->prepare($query);
-    $result->execute(array("title" => $article->getTitle(), "content" => $article->getContent(), "autor" => $article->getAutor()));
+    $result->execute(array("title" => $article->getTitle(), "content" => $article->getContent(), "author" => $article->getAuthor()));
 }
 
 }

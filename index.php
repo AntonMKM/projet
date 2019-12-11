@@ -16,16 +16,14 @@ $articleController = new ArticleController();
 
 if(!empty($_GET)){
     extract($_GET);
-
-    if(isset($action)){
-        switch($action){
+        if(isset($action)){
+            switch($action){
             case 'accueil':
                 $articleController->getArticles();
                 break;
                 case 'sendArticle':
                 $articleController->sendArticle();
                 break;
-
             case 'connexion':
                 require 'view/connexion.php';
                 break;
