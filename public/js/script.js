@@ -8,17 +8,21 @@ function confirmation(id) {
 function modif(id) {
   loginTab = document.getElementById("login" + id);
   emailTab = document.getElementById("email" + id);
-  passTab = document.getElementById("pass" + id);
+  // statusTab = document.getElementById("status" + id);
+  // passTab = document.getElementById("pass" + id);
 
   let login = loginTab.innerHTML;
   let email = emailTab.innerHTML;
-  let pass = passTab.innerHTML;
+  // let status = statusTab.innerHTML;
+  // let pass = passTab.innerHTML;
 
   loginTab.innerHTML =
     "<input required type='text' name='login' value='" + login + "'>";
   emailTab.innerHTML =
     "<input required type='text' name='email' value='" + email + "'>";
-  passTab.innerHTML = "<input type='text' name='pass' value='" + pass + "'>";
+  // statusTab.innerHTML =
+  //   "<input required type='text' name='status' value='" + status + "'>";
+  // passTab.innerHTML = "<input type='text' name='pass' value='" + pass + "'>";
 
   document.getElementById("bouton" + id).innerHTML =
     "<input type='submit' class='btn btn-success' value='update'>";

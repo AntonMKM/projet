@@ -12,7 +12,11 @@ ob_start();
         <input type="email" name="email" id="email" class="form-control" placeholder="Entrez votre adresse email" required>
         <label for="mdp">Mot de passe</label>
         <input type="password" name="pass" id="mdp" class="form-control" placeholder="Entrez votre mot de passe" required>
-        <span onclick="showPassword('pass')" id="visible">afficher le mot de passe</span>
+        <!-- <span onclick="showPassword('pass')" id="visible">afficher le mot de passe</span> -->
+        <!-- <select>
+            <option value="homme" name="sexe">homme</option>
+            <option value="femme" name="sexe">femme</option>
+        </select> -->
         <br><br>
         <input type="submit" name="inscription" value="inscription" class="button">
 

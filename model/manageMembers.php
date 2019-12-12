@@ -13,6 +13,7 @@ class ManageMembers extends DbConnect
             'login' => htmlspecialchars($data->getLogin()),
             'pass' => password_hash($data->getPass(), PASSWORD_DEFAULT),
             'email' => htmlspecialchars($data->getEmail())
+
         ]);
     }
     function manageView()
@@ -36,12 +37,13 @@ class ManageMembers extends DbConnect
     {
         $pdo = $this->Connect();
         $id = $member->getId();
-        $request = "UPDATE members SET login = :login, email = :email, pass= :pass WHERE id=$id";
+        $request = "UPDATE members SET login = :login, email = :email WHERE id=$id";
         $update = $pdo->prepare($request);
         $update->execute([
             'login' => $member->getLogin(),
-            'pass' => password_hash($member->getPass(), PASSWORD_DEFAULT),
-            'email' => $member->getEmail()
+            // 'pass' => password_hash($member->getPass(), PASSWORD_DEFAULT),
+            'email' => $member->getEmail(),
+
         ]);
     }
 

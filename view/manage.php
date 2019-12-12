@@ -11,7 +11,8 @@ ob_start();
                 <th scope="col">id</th>
                 <th scope="col">pseudo</th>
                 <th scope="col">email</th>
-                <th scope="col">mot de passe</th>
+                <th scope="col">status</th>
+                <!-- <th scope="col">mot de passe</th> -->
 
             </tr>
         </thead>
@@ -22,7 +23,8 @@ ob_start();
                     <td><?= $member->getId() ?></td>
                     <td id="login<?= $member->getId() ?>"><?= $member->getLogin() ?></td>
                     <td id="email<?= $member->getId() ?>"><?= $member->getEmail() ?></td>
-                    <td id="pass<?= $member->getId() ?>"><?= $member->getPass() ?></td>
+
+                    <!-- <td id="pass<?= $member->getId() ?>"><?= $member->getPass() ?></td> -->
                     <td id="bouton<?= $member->getId() ?>"><span class="btn btn-success boutonModif" onclick="modif(<?= $member->getId() ?>)" value="<?= $member->getId() ?>">modifier</span></td>
                     <td><span onclick="confirmation(<?= $member->getId() ?>)" class="btn btn-danger">supprimer</span></td>
 

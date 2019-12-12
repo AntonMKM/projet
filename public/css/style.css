@@ -3,7 +3,6 @@
   src: url("../fonts/LifeCraft_Font.ttf");
 }
 body {
-  /* font-family: "LifeCraft_Font"; */
   font-size: larger;
   color: burlywood;
   margin-left: 20%;
@@ -12,11 +11,8 @@ body {
   background-attachment: fixed;
 }
 #banner {
-  /* background-size: contain;
-  background-repeat: no-repeat; */
   margin-top: 2%;
   margin-bottom: 2%;
-  /* background-image: url(/public/img/banner.png); */
   display: flex;
   justify-content: space-around;
   align-items: end;
@@ -29,25 +25,31 @@ nav {
   position: absolute;
   bottom: 5px;
 }
-/* #menu {
-  margin-left: 41%;
-  margin-top: 200px;
-  position: absolute;
-} */
 .button {
   text-decoration: none;
-  background-color: grey;
+  background-color: #493548;
   color: white;
-  border-radius: 5px;
-  margin-top: 5px;
+  border-radius: 3px;
   margin-left: 5px;
-  padding: 5px;
+  padding: 2px 5px 2px 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.7px;
 }
-
+.browse {
+  background-color: brown;
+  color: white;
+  border-radius: 3px;
+  padding: 2px 5px 2px 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.7px;
+}
 textarea {
   width: 100%;
 }
 .picture {
+  margin-right: 15px;
   float: left;
   height: 50%;
 }
@@ -56,6 +58,9 @@ textarea {
   text-overflow: ellipsis;
   height: 250px;
 }
+.title {
+  font-size: x-large;
+}
 .blocNext {
   display: flex;
   justify-content: space-between;
@@ -63,4 +68,11 @@ textarea {
 .blocNext a,
 .blocNext span {
   display: inline-block;
+  color: burlywood;
+}
+.dateAuthor {
+  font-size: medium;
+}
+table {
+  opacity: 75%;
 }
