@@ -14,6 +14,8 @@
         <nav>
 
             <a class="button" href="index.php">Accueil</a>
+            <a class="button" href="index.php?action=story">L'histoire</a>
+            <a class="button" href="index.php?action=races">Races jouables</a>
             <a class="button" href="index.php?action=signin">S'inscrire</a>
             <?php if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') : ?>
                 <a class="button" href="index.php?action=manage">Gestion</a>

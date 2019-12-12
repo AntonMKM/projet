@@ -3,12 +3,19 @@
   src: url("../fonts/LifeCraft_Font.ttf");
 }
 body {
+  /* font-family: "LifeCraft_Font"; */
+  height: 100vh;
   font-size: larger;
   color: burlywood;
   margin-left: 20%;
   margin-right: 20%;
   background-image: url(/public/img/fond.jpg);
+  background-repeat:no-repeat;
   background-attachment: fixed;
+  background-size:cover;
+  text-align: justify;
+  
+  
 }
 #banner {
   margin-top: 2%;
@@ -75,4 +82,8 @@ textarea {
 }
 table {
   opacity: 75%;
+}
+#introStory {
+  float: left;
+  margin-right: 15px;
 }
