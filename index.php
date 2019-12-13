@@ -14,6 +14,7 @@ spl_autoload_register(function ($class) {
 $memberController = new MembersController();
 $articleController = new ArticleController();
 
+
 if (!empty($_GET)) {
     extract($_GET);
     if (isset($action)) {
@@ -26,6 +27,7 @@ if (!empty($_GET)) {
                 break;
                 case 'fullArticle':
                     $articleController->getFullArticle($id);
+                   
                 break;
             case 'story':
                 require 'view/story.php';
