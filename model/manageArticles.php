@@ -23,5 +23,11 @@
             $result = $this->Connect()->prepare($query);
             $result->execute(array("title" => htmlspecialchars($article->getTitle()), "content" => htmlspecialchars($article->getContent()), "author" => $article->getAuthor(), "img" => $article->getImg()));
         }
+        public function oneFullArticle($id)
+        {
+            $query = "SELECT * FROM articles WHERE id = :idArticle";
+            $result = $this->Connect()->prepare($query);
+            $result->execute(["idArticle" => $id]);
+        }
     }
     ?> 
