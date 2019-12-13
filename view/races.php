@@ -1,11 +1,9 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<?php
 
-$title = 'Les races jouables';
-ob_start();
-?>
+<?php $title = 'Les races jouables'; ob_start(); ?>
+
 <h2 style="text-align: center"> Races jouables </h2>
-<h3 style="text-align: center">Les alliés</h3>
+
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="public/img/races/nain.jpg" alt="Card image cap">
   <div class="card-body">
@@ -21,7 +19,5 @@ ob_start();
   </div>
 </div>
 
+<?php $content = ob_get_clean(); require 'template.php'; ?>
 
-<?php
-$content = ob_get_clean();
-require 'template.php';

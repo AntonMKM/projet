@@ -8,18 +8,10 @@
 </div>
 <hr>
 <h3>Commentaires de l'article</h3>
-<?php
-
-    foreach ($myComments as $comment) {
-        
-        ?>
-                
-            <p><?= $comment->getComment() ?></p>
-        </div>
-        <br>
-        <hr>
-    <?php } ?>
-<?php
+<?php foreach ($myComments as $comment) { ?>          
+        <p><?= $comment->getComment() ?></p>
+        <br><hr>    
+<?php } 
 $content= ob_get_clean();
 require 'template.php';
 ?>

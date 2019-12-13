@@ -52,6 +52,15 @@ nav {
   border-color: black;
   border-width: 0.7px;
 }
+.blocNext {
+  display: flex;
+  justify-content: space-between;
+}
+.blocNext a,
+.blocNext span {
+  display: inline-block;
+  color: burlywood;
+}
 textarea {
   width: 100%;
 }
@@ -70,15 +79,7 @@ textarea {
 .title {
   font-size: x-large;
 }
-.blocNext {
-  display: flex;
-  justify-content: space-between;
-}
-.blocNext a,
-.blocNext span {
-  display: inline-block;
-  color: burlywood;
-}
+
 .dateAuthor {
   font-size: medium;
 }
@@ -89,6 +90,7 @@ table {
   float: left;
   margin-right: 15px;
 }
-.card{
+.card-img-top {
   display: flex;
+  float: left;
 }

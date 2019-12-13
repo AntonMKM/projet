@@ -7,11 +7,11 @@ ob_start();
     <form action="index.php?action=inscription" method="post" enctype="multipart/form-data">
 
         <label for="pseudo">Pseudo</label>
-        <input type="text" name="login" id="pseudo" class="form-control" placeholder="Entrez votre pseudo" required>
+        <input type="text" name="login"  required>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Entrez votre adresse email" required>
+        <input type="email" name="email" required>
         <label for="mdp">Mot de passe</label>
-        <input type="password" name="pass" id="mdp" class="form-control" placeholder="Entrez votre mot de passe" required>
+        <input type="password" name="pass" required>
         <!-- <span onclick="showPassword('pass')" id="visible">afficher le mot de passe</span> -->
         <!-- <select>
             <option value="homme" name="sexe">homme</option>

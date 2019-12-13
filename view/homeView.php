@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$title = "page d'accueil";
+$title = "KoolMKM";
 ?>
 <!-- Formulaire d'ajout d'article -->
 <?php if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') : ?>
