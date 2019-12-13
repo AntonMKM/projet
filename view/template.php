@@ -9,7 +9,7 @@
 
 <body>
     <!--barre de navigation-->
-    <div id="banner">
+    <div id="banner" style="user-select: none;">
         <img src="public/img/banner.png" alt="banner">
         <nav>
 
@@ -28,6 +28,7 @@
             <?php endif; ?>
         </nav>
     </div>
+    <h2 style="text-align: center"> Actualité du jeu </h2>
     <?= $content ?>
 </body>
 

@@ -9,7 +9,7 @@ class MembersController
             $manage = new ManageMembers();
             $member = new Member($_POST);
             $manage->manageInscription($member);
-            header('location: index.php?action=manage');
+            header('location: index.php?action=connexion');
         } else {
             header('location: index.php?action=inscription');
         }

@@ -87,3 +87,6 @@ table {
   float: left;
   margin-right: 15px;
 }
+.card{
+  display: flex;
+}
