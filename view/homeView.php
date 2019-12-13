@@ -31,7 +31,7 @@ $title = "page d'accueil";
         <br>
         <div class="blocNext">
             <span class="dateAuthor">Posté le <?= $datenew ?> par : <?= $article->getAuthor() ?></span>
-            <a href="">Lire la suite</a>
+            <a href="index.php?action=fullArticle&id=<?= $article->getId() ?>">Lire la suite</a>
         </div>
         <hr>
     <?php } ?>

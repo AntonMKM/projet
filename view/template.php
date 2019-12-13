@@ -28,7 +28,7 @@
             <?php endif; ?>
         </nav>
     </div>
-    <h2 style="text-align: center"> Actualité du jeu </h2>
+    
     <?= $content ?>
 </body>
 

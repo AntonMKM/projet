@@ -28,7 +28,7 @@ class ArticleController
 
         header("location: index.php?action=accueil");
     }
-    function getFullArticle()
+    function getFullArticle($id)
     {
         $gestion = new ManageArticles();
         $myArticle = $gestion->oneFullArticle($id);

@@ -24,6 +24,9 @@ if (!empty($_GET)) {
             case 'sendArticle':
                 $articleController->sendArticle();
                 break;
+                case 'fullArticle':
+                    $articleController->getFullArticle($id);
+                break;
             case 'story':
                 require 'view/story.php';
                 break;
