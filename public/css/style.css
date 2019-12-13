@@ -59,6 +59,8 @@ textarea {
   margin-right: 15px;
   float: left;
   height: 50%;
+}.picture2{
+  height: 10vh;
 }
 .heightArticle {
   overflow: hidden;
