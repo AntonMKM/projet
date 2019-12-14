@@ -23,11 +23,13 @@ $title = "News"; ?>
 <h3>Commentaires de l'article</h3>
 
 <?php foreach ($myComments as $comment) { ?>
+
         <p><?= $comment->getComment() ?></p>
         <p>Posté par <?= $comment->getLogin() ?> le
                 <?php $dateC = new DateTime($comment->getDate_comment());
-                        $dateCnews = $date->format("d/m/Y à H:i"); ?>
+                        $dateCnews = $dateC->format("d/m/Y H:i"); ?>
                 <?= $dateCnews ?></p>
+                
         <br>
         <hr>
 <?php }

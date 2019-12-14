@@ -4,7 +4,7 @@ class ManageComments extends DbConnect
 {
     public function getAllComments($idArticle)
     {
-        $query = "SELECT login, comment, DATE_FORMAT(date_comment, '%d/%m/%Y  %H:%i') FROM comments WHERE id_article = :id";
+        $query = "SELECT * FROM comments WHERE id_article = :id";
         $result = $this->Connect()->prepare($query);
         $result->execute(["id" => $idArticle]);
         $tab = [];
