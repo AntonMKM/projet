@@ -36,4 +36,12 @@ class ArticleController
         $myComments = $gestion->getAllComments($id);
         require 'view/fullArticle.php';
     }
+    function sendComment()
+    {
+        $gestion = new ManageComments();
+        $comment = new Comment($_POST);
+        if (isset($_POST['comment']) && ($_POST['send'])) {
+            $gestion->sendAllComment($comment);
+        }
+    }
 }

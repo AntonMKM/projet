@@ -10,12 +10,10 @@ body {
   margin-left: 20%;
   margin-right: 20%;
   background-image: url(/public/img/fond.jpg);
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size:cover;
+  background-size: cover;
   text-align: justify;
-  
-  
 }
 #banner {
   margin-top: 2%;
@@ -32,10 +30,8 @@ nav {
   position: absolute;
   bottom: 5px;
 }
-.button {
-  text-decoration: none;
+.buttonNav {
   background-color: #493548;
-  color: white;
   border-radius: 3px;
   margin-left: 5px;
   padding: 2px 5px 2px 5px;
@@ -68,13 +64,14 @@ textarea {
   margin-right: 15px;
   float: left;
   height: 50%;
-}.picture2{
+}
+.picture2 {
   height: 10vh;
 }
 .heightArticle {
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 250px;
+  height: 240px;
 }
 .title {
   font-size: x-large;
@@ -90,7 +87,9 @@ table {
   float: left;
   margin-right: 15px;
 }
-.card-img-top {
+.card {
   display: flex;
-  float: left;
+  background-color: rgba(13, 13, 17, 0.3);
+  margin-bottom: 60px;
+  font-size: medium;
 }

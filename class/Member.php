@@ -7,7 +7,7 @@ class Member
 	private $login;
 	private $pass;
 	private $email;
-	// private $status;
+	private $status;
 	// private $sexe;
 
 	function __construct(array $data = null)
@@ -67,22 +67,13 @@ class Member
 		$this->email = $email;
 	}
 
-	// public function getStatus()
-	// {
-	// 	return $this->status;
-	// }
+	public function getStatus()
+	{
+		return $this->status;
+	}
 
-	// public function setStatus($status)
-	// {
-	// 	$this->status = $status;
-	// }
-	// public function getSexe()
-	// {
-	// 	return $this->sexe;
-	// }
-
-	// public function setSexe($sexe)
-	// {
-	// 	$this->sexe = $sexe;
-	// }
+	public function setStatus($status)
+	{
+		$this->status = $status;
+	}
 }

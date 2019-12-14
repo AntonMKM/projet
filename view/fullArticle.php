@@ -10,12 +10,16 @@ $title = "News"; ?>
 </div>
 <hr>
 <form action="#" method="POST">
-        <textarea rows="3" cols="100" name="newComment">Votre commentaire</textarea>
+        <textarea rows="2" cols="100" name="comment" placeholder="Votre commentaire"></textarea>
+        <input type="submit" value="Envoi" name="send">
 </form>
 <h3>Commentaires de l'article</h3>
 
 <?php foreach ($myComments as $comment) { ?>
         <p><?= $comment->getComment() ?></p>
+        <p>Posté par <?= $comment->getLogin() ?> le <?= $comment->getDate_comment() ?></p>
+
+
         <br>
         <hr>
 <?php }

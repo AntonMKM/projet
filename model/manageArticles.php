@@ -4,7 +4,7 @@
     {
         public function getAllArticles()
         {
-            $query = "SELECT * FROM articles";
+            $query = "SELECT * FROM articles ORDER BY date DESC";
             $result = $this->Connect()->prepare($query);
             $result->execute();
             $tab = [];
@@ -17,7 +17,6 @@
 
         public function sendAllArticle(Article $article)
         {
-            // $article = new Article($data);
             $article->setAuthor($_SESSION['login']);
             $query = "INSERT INTO articles(title, content, author, img) VALUES(:title, :content, :author, :img)";
             $result = $this->Connect()->prepare($query);
@@ -29,7 +28,7 @@
             $result = $this->Connect()->prepare($query);
             $result->execute(["idArticle" => $id]);
             $show = $result->fetch();
-            $article =new Article($show);
+            $article = new Article($show);
             return $article;
         }
     }
