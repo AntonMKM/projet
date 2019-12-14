@@ -4,12 +4,12 @@
 }
 body {
   /* font-family: "LifeCraft_Font"; */
-  height: 100vh;
+  height: 100%;
   font-size: large;
   color: burlywood;
   margin-left: 20%;
   margin-right: 20%;
-  background-image: url(/public/img/fond.jpg);
+  background-image: url(../img/fond.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -26,10 +26,7 @@ body {
 #banner img {
   width: 100%;
 }
-nav {
-  position: absolute;
-  bottom: 5px;
-}
+
 .buttonNav {
   background-color: #493548;
   border-radius: 3px;
@@ -57,12 +54,32 @@ nav {
   display: inline-block;
   color: burlywood;
 }
+.card {
+  display: flex;
+  background-color: rgba(13, 13, 17, 0.3);
+  margin-bottom: 60px;
+  font-size: medium;
+}
+.dateAuthor {
+  font-size: medium;
+}
 h3 {
   font-weight: bold;
 }
-textarea {
-  width: 100%;
+.heightArticle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 230px;
 }
+#introStory {
+  float: left;
+  margin-right: 15px;
+}
+nav {
+  position: absolute;
+  bottom: 5px;
+}
+
 .picture {
   margin-right: 15px;
   float: left;
@@ -74,28 +91,17 @@ textarea {
   margin-right: 15px;
   width: 50%;
 }
-.heightArticle {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 230px;
-}
+
 .title {
   font-size: x-large;
 }
 
-.dateAuthor {
-  font-size: medium;
-}
+
 table {
   opacity: 75%;
 }
-#introStory {
-  float: left;
-  margin-right: 15px;
+textarea {
+  width: 100%;
 }
-.card {
-  display: flex;
-  background-color: rgba(13, 13, 17, 0.3);
-  margin-bottom: 60px;
-  font-size: medium;
-}
+
+
