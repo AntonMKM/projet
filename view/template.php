@@ -29,6 +29,8 @@
             <?php endif; ?>
         </nav>
     </div>
+    <?php if (isset($_SESSION['login'])) echo 'Bienvenue ' . $_SESSION['login'] ?>
+    <br><br>
 
     <?= $content ?>
 </body>

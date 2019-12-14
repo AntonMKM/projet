@@ -4,7 +4,7 @@ $title = "KoolMKM";
 ?>
 <!-- Formulaire d'ajout d'article -->
 <?php if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') : ?>
-    <h4 class="title">Ajouter un article</h4>
+    <h3>Ajouter un article</h3>
     <form action="index.php?action=sendArticle" method="post" enctype="multipart/form-data">
         <input id="title" type="text" name="title" placeholder="Titre de l'article">
         <br><br>
@@ -14,6 +14,7 @@ $title = "KoolMKM";
         <label for="img" class="browse">Choisir illustration</label>
         <input type="submit" value="Envoi" name="send">
     </form>
+    <br>
 <?php endif; ?>
 <div>
     <!-- Affichage des articles -->
@@ -24,7 +25,8 @@ $title = "KoolMKM";
         ?>
 
         <div class="heightArticle">
-            <h4 class="title"><?= $article->getTitle() ?></h4>
+            <h3><?= $article->getTitle() ?></h3>
+            <br>
             <img class="picture" src="public/img/<?= $article->getImg() ?>">
             <p class="content"><?= $article->getContent() ?></p>
         </div>

@@ -37,13 +37,13 @@ class ManageMembers extends DbConnect
     {
         $pdo = $this->Connect();
         $id = $member->getId();
-        $request = "UPDATE members SET login = :login, email = :email WHERE id=$id";
+        $request = "UPDATE members SET login = :login, email = :email, status = :status WHERE id=$id";
         $update = $pdo->prepare($request);
         $update->execute([
             'login' => $member->getLogin(),
             // 'pass' => password_hash($member->getPass(), PASSWORD_DEFAULT),
             'email' => $member->getEmail(),
-
+            'status' => $member->getStatus()
         ]);
     }
 

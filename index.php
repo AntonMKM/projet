@@ -25,16 +25,18 @@ if (!empty($_GET)) {
             case 'sendArticle':
                 $articleController->sendArticle();
                 break;
-                case 'fullArticle':
-                    $articleController->getFullArticle($id);
-                   
+            case 'fullArticle':
+                $articleController->getFullArticle($id);
+                break;
+            case 'sendComment':
+                $articleController->sendComment();
                 break;
             case 'story':
                 require 'view/story.php';
                 break;
-                case 'races':
-                    require 'view/races.php';
-                    break;
+            case 'races':
+                require 'view/races.php';
+                break;
             case 'connexion':
                 require 'view/connexion.php';
                 break;

@@ -12,10 +12,9 @@ if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
                     <th scope="col">pseudo</th>
                     <th scope="col">email</th>
                     <th scope="col">status</th>
-                    <!-- <th scope="col">mot de passe</th> -->
-
                 </tr>
             </thead>
+
             <tbody>
                 <?php foreach ($members as $member) : ?>
 
@@ -29,7 +28,6 @@ if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
                         <td><span onclick="confirmation(<?= $member->getId() ?>)" class="btn btn-danger">Supprimer</span></td>
 
                     </tr>
-
                 <?php endforeach; ?>
             </tbody>
         </table>

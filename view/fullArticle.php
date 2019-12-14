@@ -3,21 +3,29 @@ $title = "News"; ?>
 
 <!-- Affichage article entier -->
 <div id="article">
+
+        <h3> <?= $myArticle->getTitle() ?> </h3>
         <img class="picture2" src="public/img/<?= $myArticle->getImg() ?>">
-        <p> <?= $myArticle->getTitle() ?> </p>
         <p> <?= $myArticle->getContent() ?> </p>
-        <span class="dateAuthor">Posté le <?= $myArticle->getDate() ?> par : <?= $myArticle->getAuthor() ?></span>
+        <?php $date = new DateTime($myArticle->getDate());
+        $datenews = $date->format("d/m/Y à H:i"); ?>
+        <span class="dateAuthor">Posté le <?= $datenews ?> par : <?= $myArticle->getAuthor() ?></span>
 </div>
 <hr>
-<form action="#" method="POST">
+<form action="index.php?action=sendComment" method="POST">
+        <input type="text" hidden name="id_article" value=<?= $myArticle->getId() ?>>
         <textarea rows="2" cols="100" name="comment" placeholder="Votre commentaire"></textarea>
         <input type="submit" value="Envoi" name="send">
 </form>
+<br>
 <h3>Commentaires de l'article</h3>
 
 <?php foreach ($myComments as $comment) { ?>
         <p><?= $comment->getComment() ?></p>
-        <p>Posté par <?= $comment->getLogin() ?> le <?= $comment->getDate_comment() ?></p>
+        <p>Posté par <?= $comment->getLogin() ?> le
+                <?php $dateC = new DateTime($comment->getDate_comment());
+                        $dateCnews = $date->format("d/m/Y à H:i"); ?>
+                <?= $dateCnews ?></p>
 
 
         <br>

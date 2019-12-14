@@ -3,7 +3,7 @@
 $title = 'L\'histoire';
 ob_start();
 ?>
-<h2 style="text-align: center"> Introduction à l'univers de World of Warcraft </h2>
+<h3 style="text-align: center"> Introduction à l'univers de World of Warcraft </h3>
 <div #video>
     <iframe id="introStory" width="560" height="315" src="https://www.youtube.com/embed/aL12LwFDrxw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

@@ -5,7 +5,7 @@
 body {
   /* font-family: "LifeCraft_Font"; */
   height: 100vh;
-  font-size: larger;
+  font-size: large;
   color: burlywood;
   margin-left: 20%;
   margin-right: 20%;
@@ -57,6 +57,9 @@ nav {
   display: inline-block;
   color: burlywood;
 }
+h3 {
+  font-weight: bold;
+}
 textarea {
   width: 100%;
 }
@@ -66,12 +69,15 @@ textarea {
   height: 50%;
 }
 .picture2 {
-  height: 10vh;
+  display: flex;
+  float: left;
+  margin-right: 15px;
+  width: 50%;
 }
 .heightArticle {
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 240px;
+  height: 230px;
 }
 .title {
   font-size: x-large;
