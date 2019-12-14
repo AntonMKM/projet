@@ -11,9 +11,9 @@ ob_start(); ?>
 	<h1>Se connecter</h1>
 	<form method="post" class="form-group" action="index.php?action=connecter">
 		<label for="pseudo">Pseudo</label>
-		<input type="text" name="login" id="pseudo" placeholder="Pseudo" class="form-control">
+		<input type="text" name="login" id="pseudo" placeholder="Pseudo" class="form-control" required>
 		<label for="mdp">Mot de passe</label>
-		<input type="password" name="pass" id="mdp" placeholder="Mot de passe" class="form-control">
+		<input type="password" name="pass" id="mdp" placeholder="Mot de passe" class="form-control" required>
 		<br>
 		<input type="submit" value="Se connecter" class="button">
 	</form>

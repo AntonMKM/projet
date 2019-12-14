@@ -17,7 +17,10 @@
             <a style="text-decoration: none; color:white" class="buttonNav" href="index.php">Accueil</a>
             <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=story">L'histoire</a>
             <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=races">Races jouables</a>
-            <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=signin">S'inscrire</a>
+            <?php if (!isset($_SESSION['id'])) : ?>
+                <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=signin">S'inscrire</a>
+            <?php endif; ?>
+            
             <?php if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') : ?>
                 <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=manage">Gestion</a>
             <?php endif; ?>

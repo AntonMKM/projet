@@ -1,5 +1,6 @@
 <?php
 $title = 'Gestion';
+
 if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
     ob_start();
     ?>
@@ -33,7 +34,7 @@ if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
         </table>
     </form>
 <?php
-}
+} 
 $content = ob_get_clean();
 require 'template.php';
 ?>

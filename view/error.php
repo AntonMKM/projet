@@ -1,1 +1,1 @@
-Page d'erreur
+Page d'erreur : <a href="../index.php">Retour à l'accueil</a>

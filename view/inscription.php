@@ -18,11 +18,6 @@ ob_start();
         <br>
         <input type="password" name="pass" required>
         <br>
-        <!-- <span onclick="showPassword('pass')" id="visible">afficher le mot de passe</span> -->
-        <!-- <select>
-            <option value="homme" name="sexe">homme</option>
-            <option value="femme" name="sexe">femme</option>
-        </select> -->
         <br><br>
         <input type="submit" name="inscription" value="Inscription" class="button">
 
