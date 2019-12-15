@@ -13,11 +13,11 @@ $title = "News"; ?>
 </div>
 <hr>
 <?php if (isset($_SESSION['id'])) : ?>
-<form action="index.php?action=sendComment" method="POST">
-        <input type="text" hidden name="id_article" value=<?= $myArticle->getId() ?>>
-        <textarea rows="2" cols="100" name="comment" placeholder="Votre commentaire"></textarea>
-        <input type="submit" value="Envoi" name="send">
-</form>
+        <form action="index.php?action=sendComment" method="POST">
+                <input type="text" hidden name="id_article" value=<?= $myArticle->getId() ?>>
+                <textarea rows="2" cols="100" name="comment" placeholder="Votre commentaire" required></textarea>
+                <input type="submit" value="Envoi" name="send">
+        </form>
 <?php endif ?>
 <br>
 <h3>Commentaires de l'article</h3>
@@ -29,7 +29,6 @@ $title = "News"; ?>
                 <?php $dateC = new DateTime($comment->getDate_comment());
                         $dateCnews = $dateC->format("d/m/Y H:i"); ?>
                 <?= $dateCnews ?></p>
-                
         <br>
         <hr>
 <?php }

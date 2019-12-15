@@ -75,6 +75,22 @@ h3 {
   float: left;
   margin-right: 15px;
 }
+/* @media screen and (max-width: 1024px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  #banner {
+    align-items: center;
+  }
+  .card-body {
+    width: 100%;
+  }
+} */
 nav {
   position: absolute;
   bottom: 5px;
@@ -96,12 +112,9 @@ nav {
   font-size: x-large;
 }
 
-
 table {
   opacity: 75%;
 }
 textarea {
   width: 100%;
 }
-
-

@@ -4,7 +4,7 @@ $title = 'Gestion';
 if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
     ob_start();
     ?>
-
+    <h2>Gestion des membres </h2>
     <form id='formModif' method="POST" enctype="multipart/form-data">
         <table class="table table-dark">
             <thead>
@@ -34,7 +34,7 @@ if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') {
         </table>
     </form>
 <?php
-} 
+}
 $content = ob_get_clean();
 require 'template.php';
 ?>

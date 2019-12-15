@@ -40,7 +40,6 @@ class ArticleController
     {
         $gestion = new ManageComments();
         $comment = new Comment($_POST);
-        // if (isset($_POST['comment']) && ($_POST['send'])) {
         $gestion->sendAllComment($comment);
         header('location:index.php?action=fullArticle&id=' . $comment->getId_article());
     }

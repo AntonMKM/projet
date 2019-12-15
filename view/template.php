@@ -12,15 +12,15 @@
     <!--barre de navigation-->
     <div id="banner" style="user-select: none;">
         <img src="public/img/banner.png" alt="banner">
-        <nav>
 
+        <nav>
             <a style="text-decoration: none; color:white" class="buttonNav" href="index.php">Accueil</a>
             <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=story">L'histoire</a>
             <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=races">Races jouables</a>
             <?php if (!isset($_SESSION['id'])) : ?>
                 <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=signin">S'inscrire</a>
             <?php endif; ?>
-            
+
             <?php if (isset($_SESSION['status']) and $_SESSION['status'] == 'admin') : ?>
                 <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=manage">Gestion</a>
             <?php endif; ?>
@@ -31,6 +31,7 @@
                 <a style="text-decoration: none; color:white" class="buttonNav" href="index.php?action=connexion">Se connecter</a>
             <?php endif; ?>
         </nav>
+
     </div>
     <?php if (isset($_SESSION['login'])) echo 'Bienvenue ' . $_SESSION['login'] ?>
     <br><br>
